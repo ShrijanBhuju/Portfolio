@@ -1,22 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Welcome to My Portfolio</title>
-</head>
-<body>
+    <script src="https://kit.fontawesome.com/889b838ef3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
     <header>
-        
-    </header>
-    <nav>
-        <ul>
+      <div class="container">
+        <nav>
+          <img src="Assets/logo.png" class="logo" />
+          <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="pages/projects.html">My Projects</a></li>
-            <li><a href="pages/aboutMe..html">About Me</a></li>
+            <li><a href="pages/projects.html ass">About Me</a></li>
+            <li><a href="pages/aboutMe..html">My Projects</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</body>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Full-Stack JavaScript Developer</p>
+          <h1>
+            Hi, I'm <span>Shrijan Bhuju</span><br />
+            with a passion for Innovation
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- -----------about----------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Assets/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="sub-text">
+              To grow as a full-stack web developer, highly focusing in
+              javaScript's different libraries to enhance the website
+              performance and its visibility. I aim to use my expertise in
+              frontend and backend. My ambition is to work in a dynamic
+              enviroment enhancing my professional career by inspiring me update
+              my skills and knowledge with the latest industry trends and
+              technologies.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>FrontEnd</span><br />HTML5</li>
+                <li><span>BackEnd</span><br /></li>
+                <li><span>Search Engine optimization</span><br /></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Nothing to Dispolay</span><br /></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022 - Present</span><br />
+                  Bsc. Hons. Computing<br />
+                  London Metropolitan University
+                </li>
+                <li>
+                  <span>2020 - 2022</span><br />
+                  Higher Secondary Education Board of Nepal<br />
+                  Kathmandu World School
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------Projects---------------- -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="Assets/work-1.png" alt="" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The app connects you to to the talented people around the World.
+                Download it from the Play Store.
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Assets/work-2.png" alt="" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The app connects you to to the talented people around the World.
+                Download it from the Play Store.
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Assets/work-3.png" alt="" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The app connects you to to the talented people around the World.
+                Download it from the Play Store.
+              </p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
