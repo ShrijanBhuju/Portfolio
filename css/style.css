@@ -5,21 +5,29 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: black;
-  color: white;
+  background: #f5f5f5;
+  color: #2e2e2e;
 }
 
 header {
   width: 100%;
   height: 100vh;
-  background-image: url(Assets/background.png);
+  /* background-image: url(../Assets/code.jpg); */
   background-size: cover;
   background-position: center;
 }
 
 .container {
   padding: 10px 10%;
+}
+
+.container.navBar {
+  background-color: #333333;
 }
 
 nav {
@@ -40,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #c0c0c0;
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -50,7 +58,7 @@ nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background-color: red;
+  background-color: #7b68ee;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -72,13 +80,13 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-  color: red;
+  color: #6a5acd;
 }
 
 /*------About------*/
 #about {
   padding: 80px 0;
-  color: gray;
+  color: #696969;
 }
 
 .row {
@@ -103,7 +111,7 @@ nav ul li a:hover::after {
 .sub-title {
   font-size: 60px;
   font-weight: 600;
-  color: white;
+  color: #2e2e2e;
 }
 
 .sub-text {
@@ -127,7 +135,7 @@ nav ul li a:hover::after {
   content: "";
   width: 0;
   height: 3px;
-  background: red;
+  background: #7b68ee;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -144,7 +152,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-  color: rgb(233, 118, 118);
+  color: #6a5acd;
   font-size: 14px;
 }
 
@@ -159,10 +167,11 @@ nav ul li a:hover::after {
 /* --------------Projects--------------- */
 #projects {
   padding: 50px 0;
+  color: #fff;
 }
 
 .work-list {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
@@ -183,7 +192,7 @@ nav ul li a:hover::after {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), red);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), #2f4f4f);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -200,13 +209,13 @@ nav ul li a:hover::after {
 }
 
 .layer h3 {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .layer a {
   margin-top: 20px;
-  color: red;
+  color: #333;
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -229,16 +238,17 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid red;
+  border: 1px solid #7b68ee;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: white;
+  color: #708090;
   transition: background 0.5s;
 }
 
 .btn:hover {
-  background: red;
+  background: #7b68ee;
+  color: #fff;
 }
 
 /* ---------------Contact----------------- */
@@ -255,7 +265,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p i {
-  color: red;
+  color: #8c8c8c;
   margin-right: 15px;
   font-size: 25px;
 }
@@ -267,41 +277,124 @@ nav ul li a:hover::after {
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
-  margin-right: grey;
+  color: #8c8c8c;
+  margin-right: 15px;
   display: inline-block;
   transition: transform 0.5s;
 }
 
 .social-icons a:hover {
-  color: red;
+  color: #7b68ee;
   transform: translateY(-5px);
 }
 
-.btn.btn2{
-display: inline-block;
-background: red;
+.btn.btn2 {
+  display: inline-block;
+  color: #fff;
+  background: #7b68ee;
 }
 
-.contact-right form{
+.contact-right form {
   width: 100%;
 }
 
-form input, form textarea{
+form input,
+form textarea {
   width: 100%;
-  border: 0;
-  outline: none;
-  background: rgba(90, 86, 86, 0.863);
+  border: 1px;
+  outline: solid;
+  background: #ffffff;
+  border-color: #d3d3d3;
   padding: 15px;
   margin: 15px 0;
-  color: white;
+  color: #2e2e2e;
   font-size: 18px;
   border-radius: 6px;
 }
 
-footer{
+footer {
+  background-color: #333333;
+  color: #c0c0c0;
   width: 100%;
   text-align: center;
   padding: 25px 0;
   font-weight: 300;
   margin-top: 20px;
+}
+
+/* -------------Smaller Devices------------------------ */
+nav .fa-solid {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-text {
+    margin-top: 100px;
+    font-size: 16px;
+  }
+  .hea der-text h1 {
+    font-size: 30px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+    color: #c0c0c0;
+  }
+
+  nav ul {
+    background-color: #7b68ee;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    color: #c0c0c0;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }

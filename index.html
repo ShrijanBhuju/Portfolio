@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Welcome to My Portfolio</title>
+    <link rel="icon" href="Assets/toplogo.png" type="image/x-icon">
+    <title>Shrijan Bhuju | Portfolio</title>
     <script
       src="https://kit.fontawesome.com/889b838ef3.js"
       crossorigin="anonymous"
@@ -12,16 +13,20 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container navBar">
         <nav>
-          <img src="Assets/logo.png" class="logo" />
-          <ul>
+          <a href="#"><img src="Assets/logo.png" class="logo" /></a>
+          <ul id="sideBar">
             <li><a href="#">Home</a></li>
-            <li><a href="pages/projects.html ass">About Me</a></li>
-            <li><a href="pages/aboutMe..html">My Projects</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
+      </div>
+      <div class="container text">
         <div class="header-text">
           <p>Full-Stack JavaScript Developer</p>
           <h1>
@@ -96,12 +101,12 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
           <div class="work">
-            <img src="Assets/work-1.png" alt="" />
+            <img src="Assets/work-1.jpg" alt="" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>Tic Tac Toe Game</h3>
               <p>
-                The app connects you to to the talented people around the World.
-                Download it from the Play Store.
+                This is a two player game of Tic Tac Toe made from JavaScript.
+                Tap the below Link to get the Code.
               </p>
               <a href="#"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
@@ -109,12 +114,13 @@
             </div>
           </div>
           <div class="work">
-            <img src="Assets/work-2.png" alt="" />
+            <img src="Assets/work-2.jpg" alt="" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>E-Commerce Website FrontEnd</h3>
               <p>
-                The app connects you to to the talented people around the World.
-                Download it from the Play Store.
+                This a E-Commercew Website for selling Cameras. This is just the
+                FrontEnd part made using HTML, CSS & JavaScript. Tap the below
+                Link to get the Code.
               </p>
               <a href="#"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
@@ -124,10 +130,23 @@
           <div class="work">
             <img src="Assets/work-3.png" alt="" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>UI Design</h3>
               <p>
-                The app connects you to to the talented people around the World.
-                Download it from the Play Store.
+                UI design project for a Horti-Culture based platform, made using
+                Figma. Tap the below Link to see the Design.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Assets/work-4.jpg" alt="" />
+            <div class="layer">
+              <h3>Weather App  (React + Vite)</h3>
+              <p>
+                The app lets you to see the weather of cities all around the
+                World. Tap the below Link to get the Code.
               </p>
               <a href="#"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
@@ -135,7 +154,7 @@
             </div>
           </div>
         </div>
-        <!-- <a href="#" class="btn">See More</a> -->
+        <!-- <a href="#" class="btn">See More</a> (No Functionality but can be useful later on) -->
       </div>
     </div>
 
@@ -158,7 +177,12 @@
             <a href="Assets/my-cv.pdf" class="btn btn2">Download My CV</a>
           </div>
           <div class="contact-right">
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="32684abd-b33a-42d1-bd65-210f546e7324"
+              />
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -177,7 +201,7 @@
         </div>
       </div>
       <footer>
-        <p> Copyright &copy; Shrijan Bhuju 2024</p>
+        <p>Copyright &copy; 2024 Shrijan Bhuju</p>
       </footer>
     </div>
 
